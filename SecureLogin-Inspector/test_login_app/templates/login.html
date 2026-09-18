@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>SecureLogin Test Application</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1>🔐 SecureLogin</h1>
+
+        <p class="subtitle">
+            Local Test Login Application
+        </p>
+
+        <form method="POST">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        {% if message %}
+
+        <p class="error">
+            {{ message }}
+        </p>
+
+        {% endif %}
+
+        <div class="test-account">
+
+            <strong>Test Account</strong>
+
+            <p>Email: test@example.com</p>
+
+            <p>Password: Test@123</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

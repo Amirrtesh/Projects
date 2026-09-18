@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>✅ Login Successful</h1>
+
+        <p>
+            Welcome, <strong>{{ email }}</strong>
+        </p>
+
+        <div class="security-message">
+
+            <h2>Local Test Environment</h2>
+
+            <p>
+                This application is used only for
+                security testing and education.
+            </p>
+
+        </div>
+
+        <a href="/logout">
+
+            <button>
+                Logout
+            </button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>
